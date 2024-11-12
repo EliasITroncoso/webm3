@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../../context/userContext";
 import { diaSemana, isFormValid, isValidTime, validateNewAppoint } from "../../helpers/validate";
+import Swal from "sweetalert2";
 
 const NewAppointment = () => {
 
@@ -28,10 +29,18 @@ const NewAppointment = () => {
                 description: formData.description,
                 userId: userActive.id
             })
-            alert("Su turno fue reservado con exito!")
+            Swal.fire({
+                title: "Reservado!",
+                text: "Su turno fue reservado con exito!",
+                icon: "success"
+              });
             navigate("/appointments")
          } catch (error) {
-            alert("El turno no se agendo correctamente")
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Algo fallo... su reserva no se ha tomado"
+              });
              console.log("Error del servidor: ", error)
              console.log("lo que estoy enviando: ", formData)
          }

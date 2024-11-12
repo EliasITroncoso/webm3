@@ -1,6 +1,7 @@
 import { useUser } from "../../context/userContext";
 import styles from "./Navbar.module.css"
 import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const Navbar = () => {
@@ -8,8 +9,20 @@ const Navbar = () => {
     const navigate = useNavigate();
 
     const logout = () => {
-        setUserActive(null); // Limpia el estado de usuario activo
-        navigate("/login");
+        Swal.fire({
+            title: "Estas seguro que quieres salir?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Si, salir"
+          }).then((result) => {
+            if (result.isConfirmed) {
+                setUserActive(null); // Limpia el estado de usuario activo
+                navigate("/login");
+            }
+          });
+
     }
 
     return (

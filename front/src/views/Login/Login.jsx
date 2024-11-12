@@ -4,6 +4,7 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import { validateLogin } from "../../helpers/validate";
 import axios from "axios";
 import { useUser } from "../../context/userContext";
+import Swal from "sweetalert2";
 
 const Login = () => {
 
@@ -15,12 +16,20 @@ const Login = () => {
     try {
         const response = await axios.post("http://localhost:3000/users/login", formData)
         if (response.status === 201 || response.status === 200) {
-            alert("Usuario logeado con exito!")
+          Swal.fire({
+            title: "Login Exitoso!",
+            text: "Usuario logeado con exito!",
+            icon: "success"
+          });
             setUserActive(response.data.user)
             navigate("/home")
         }
       } catch (error) {
-        alert("Ha ocurrido un error. Usuario o contraseña incorrectos")
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Usuario o contraseña incorrecto"
+        });
         console.log("Error del servidor: ", error)
     }
 }

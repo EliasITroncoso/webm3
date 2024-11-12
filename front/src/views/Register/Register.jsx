@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Register.module.css";
 import axios from "axios";
+import Swal from "sweetalert2";
  
 const Register = () => {
 
@@ -41,10 +42,18 @@ const Register = () => {
             console.log(response)
             console.log("lo que estoy enviando: ", formData)
             if (response.status === 201 || response.status === 200) {
-                alert("Usuario creado con exito!")
+                Swal.fire({
+                    title: "Registro exitoso!",
+                    text: "Usuario registrado con exito!",
+                    icon: "success"
+                  });
                 navigate("/login")
             } else {
-                alert("Ha ocurrido un problema con el registro")
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Algo salio mal.. reintenta"
+                  });
             }
         } catch (error) {
             console.log("Error del servidor: ", error)
