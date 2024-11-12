@@ -1,0 +1,39 @@
+.conteiner {
+    width: 80vw;
+    background-color: rgb(184, 184, 192);
+    border: solid black 1px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.text_red {
+    color: red;
+    font-weight: bolder;
+}
+
+.text_green {
+    color: green;
+    font-weight: bolder;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+  }

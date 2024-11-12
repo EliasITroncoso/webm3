@@ -1,0 +1,67 @@
+.Navbar {
+    margin: 0;
+    width: 100vw;
+    height: auto;
+    background: linear-gradient(270deg, #ff7e5f, #feb47b, #3a7bd5, #00d2ff);
+    background-size: 600% 600%;
+    animation: gradient 18s ease infinite;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: large;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+.img_logo {
+    width: 4vw;
+}
+
+.nav_center {
+    display: flex;
+    width: 30vw;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bold;
+    font-size: large;
+}
+
+.nav_r {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.f_logout {
+    font-size: small;
+    font-weight: bolder;
+    color: red
+}
+
+.logoutButton {
+    background-color: #f05454;
+    color: #ffffff;
+    border: none;
+    padding: 4px 16px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logoutButton:hover {
+    background-color: #d61f1f;
+}
+
+.logoutButton:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}

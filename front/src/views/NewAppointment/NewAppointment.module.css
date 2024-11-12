@@ -1,0 +1,52 @@
+.form_new {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(121, 121, 121, 0.322);
+
+    border: solid black 1px;
+    border-radius: 20px;
+    width: 60vw;
+    padding: 10px;
+    margin: auto;
+}
+
+.input_new {
+    background-color: #e6e6e6;
+    width: 30vw;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.input_error {
+    background-color: rgba(255, 0, 0, 0.527);
+    width: 30vw;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.button_new {
+    padding: 10px 20px;               /* Espaciado interno para agrandar el botón */
+    font-size: 16px;                  /* Tamaño de la fuente */
+    font-weight: bold;                /* Grosor del texto */
+    color: #ffffff;                   /* Color del texto */
+    background-color: #523aaa;        /* Color de fondo */
+    border: none;                     /* Quitar bordes predeterminados */
+    border-radius: 5px;               /* Bordes redondeados */
+    cursor: pointer; 
+    margin: 15px                 /* Icono de puntero al pasar el mouse */
+}
+
+button:disabled {
+    background-color: #ccc;  /* Cambia el color del fondo */
+    color: #666;             /* Cambia el color del texto */
+    cursor: not-allowed;     /* Cambia el cursor */
+}
+
+.messageError {
+    color: red;
+    font-weight: bolder;
+}

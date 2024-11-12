@@ -1,0 +1,76 @@
+/*! "Nunito", sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Grey+Qo&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Timmana&display=swap');
+
+/* reset.css */
+
+/* Elimina márgenes, paddings y bordes por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Define un fondo blanco y color de texto negro por defecto */
+  html, body {
+    height: 100%;
+    font-family: "Nunito", sans-serif;
+    color: #000;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+
+
+    background-image: url("../public/fondo-pasillo-vacio.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  /* Quitar decoración y color de enlaces */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Eliminar el estilo de lista por defecto */
+  ul, ol {
+    list-style: none;
+  }
+  
+  /* Alinear imágenes, videos y canvas correctamente */
+  img, video, canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Eliminar bordes y estilos de inputs, botones y selects */
+  button, input, select, textarea {
+    font: inherit;
+    border: none;
+    outline: none;
+    background: none;
+    color: inherit;
+  }
+  
+  /* Hacer que los botones sean clicables */
+  button {
+    cursor: pointer;
+  }
+  
+  /* Asegurar que los formularios no usen bordes por defecto */
+  fieldset {
+    border: none;
+  }
+  
+  /* Añadir altura mínima a los elementos que se comportan como bloques */
+  body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, figure, dl, dd {
+    min-height: 0;
+  }
+  
+  /* Evitar problemas de tamaño en iframe */
+  iframe {
+    border: none;
+  }
+  
+  

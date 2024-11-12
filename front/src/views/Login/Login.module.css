@@ -1,0 +1,55 @@
+.form_login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    border: solid black 1px;
+    border-radius: 20px;
+    width: 40vw;
+    height: 15rem;
+    padding: 10px;
+    margin: auto;
+
+    background: linear-gradient(to bottom, #f1300070, #feb47b2c);
+
+}
+
+.input_login {
+    background-color: #c9c9c9;
+    width: 20vw;
+    margin-bottom: 20px;
+
+}
+
+.button_login {
+    padding: 10px 20px;               /* Espaciado interno para agrandar el botón */
+    font-size: 16px;                  /* Tamaño de la fuente */
+    font-weight: bold;                /* Grosor del texto */
+    color: #ffffff;                   /* Color del texto */
+    background-color: darkgreen;        /* Color de fondo */
+    border: none;                     /* Quitar bordes predeterminados */
+    border-radius: 5px;               /* Bordes redondeados */
+    cursor: pointer;                  /* Icono de puntero al pasar el mouse */
+
+    margin-top: 20px;
+}
+
+.register{
+    display:flex;
+    justify-content: center;
+
+    font-size: 1.25rem;
+    margin-top: 20px;  
+}
+
+.register_esp{
+    margin-left: 5px;
+    font-weight: bolder;
+}
+
+.messageError {
+    color: red;
+    font-weight: bolder;
+}
